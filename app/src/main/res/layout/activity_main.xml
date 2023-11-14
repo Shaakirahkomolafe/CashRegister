@@ -8,13 +8,27 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:hint="Product Type"
-        android:textSize="20sp"
         android:id="@+id/selectedProduct"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/managerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/teal"
+        android:text="@string/manager"
+        app:layout_constraintBottom_toBottomOf="@id/selectedProduct"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/selectedProduct"
+
+        app:layout_constraintTop_toTopOf="@+id/selectedProduct" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,6 +37,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/selectedProduct"
         android:hint="Total"
+        android:gravity="end"
         app:layout_constraintBottom_toTopOf="@id/guideline2"
 
 
@@ -44,7 +59,8 @@
         app:layout_constraintTop_toBottomOf="@id/guideline2"
         app:layout_constraintBottom_toTopOf="@id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintEnd_toStartOf="@+id/buybut"
         >
 
         <TableRow
@@ -58,6 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/one"
+                android:backgroundTint="@color/teal"
 
             />
             <Button
@@ -65,6 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/two"
+                android:backgroundTint="@color/teal"
 
             />
 
@@ -73,7 +91,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/three"
-
+                android:backgroundTint="@color/teal"
                 />
         </TableRow>
         <TableRow
@@ -87,6 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/four"
+            android:backgroundTint="@color/teal"
 
             />
         <Button
@@ -94,6 +113,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/five"
+            android:backgroundTint="@color/teal"
 
             />
         <Button
@@ -101,7 +121,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/six"
-
+            android:backgroundTint="@color/teal"
             />
         </TableRow>
         <TableRow
@@ -115,6 +135,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/seven"
+                android:backgroundTint="@color/teal"
 
                 />
             <Button
@@ -122,6 +143,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/eight"
+                android:backgroundTint="@color/teal"
 
                 />
             <Button
@@ -129,6 +151,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nine"
+                android:backgroundTint="@color/teal"
 
                 />
         </TableRow>
@@ -136,6 +159,7 @@
             android:id="@+id/tableRow4"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
+
             >
 
             <Button
@@ -143,6 +167,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cancel"
+                android:backgroundTint="@color/teal"
 
                 />
             <Button
@@ -150,6 +175,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/zero"
+                android:backgroundTint="@color/teal"
 
                 />
 
@@ -159,12 +185,16 @@
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:id="@+id/buybut"
+        android:backgroundTint="@color/teal"
         android:text="@string/buy"
         app:layout_constraintStart_toEndOf="@+id/tablelay"
-        app:layout_constraintTop_toBottomOf="@id/totalAmount"
+        app:layout_constraintTop_toTopOf="@+id/tablelay"
+      app:layout_constraintBottom_toBottomOf="@id/tablelay"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/guideline"
+        android:layout_marginLeft="10dp"
+
 
         />
 <androidx.constraintlayout.widget.Guideline
@@ -174,11 +204,23 @@
     android:id="@+id/guideline"
     app:layout_constraintGuide_percent="0.6"
     />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quantity"
+        android:id="@+id/quant"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintBottom_toTopOf="@id/listv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        />
     <ListView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:id="@+id/listv"
-        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/quant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
