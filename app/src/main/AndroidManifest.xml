@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".myApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,12 +14,36 @@
         android:theme="@style/Theme.CashRegister"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity2"
-            android:exported="false" />
+            android:name=".HistoryDetail"
+            android:exported="false"
+            android:label="Details of purchase">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".RecyclerActivity" />
+        </activity>
+        <activity
+            android:name=".RecyclerActivity"
+            android:exported="false"
+            android:label="History">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ManagerActivity" />
+        </activity>
+        <activity
+            android:name=".RestockActivity"
+            android:exported="true"
+            android:label="Restock"/>
+        <activity
+            android:name=".ManagerActivity"
+            android:exported="true"
+            android:label="Manager">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

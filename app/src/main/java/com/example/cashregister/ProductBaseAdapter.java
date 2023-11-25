@@ -44,7 +44,8 @@ public class ProductBaseAdapter extends BaseAdapter {
         nameTextView.setText(productStockArrayList.get(position).productName);
         String priceField = String.valueOf(productStockArrayList.get(position).productPrice);
         priceTextView.setText(priceField);
-        quantityTextView.setText(productStockArrayList.get(position).stockQuantity);
+        String quantityField = String.valueOf(productStockArrayList.get(position).stockQuantity);
+        quantityTextView.setText(quantityField);
 
 
 

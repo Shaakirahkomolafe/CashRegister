@@ -1,6 +1,5 @@
 package com.example.cashregister;
 
-import android.os.Parcelable;
 
 import java.io.Serializable;
 
@@ -24,6 +23,10 @@ public class ProductStock implements Serializable {
 
     public String getProductName(){
         return productName;
+    }
+
+    public void setStockQuantity(int stockQuantity) {
+        this.stockQuantity = stockQuantity;
     }
 
     public int getStockQuantity(){

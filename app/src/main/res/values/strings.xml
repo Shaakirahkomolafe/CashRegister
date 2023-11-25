@@ -13,6 +13,18 @@
     <string name="cancel">C</string>
     <string name="buy">BUY</string>
     <string name="manager">MANAGER</string>
+    <string name="detailProduct">Product:</string>
+    <string name="detailPrice">Price:</string>
+    <string name="purchaseDate">Purchase Date:</string>
+    <string name="ok">OK</string>
+    <string name="erase">Cancel</string>
+    <string name="newQ">Enter new quantity</string>
+
+
+
+
+
+
 
 
 </resources>

@@ -9,14 +9,14 @@
 
     <TextView
         android:id="@+id/productName"
-        app:layout_constraintBottom_toTopOf="@id/productPrice"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Product Name"
-        />
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/productPrice"
+        app:layout_constraintEnd_toStartOf="@id/productStock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/productPrice"
@@ -25,8 +25,6 @@
         app:layout_constraintTop_toBottomOf="@id/productName"
         app:layout_constraintStart_toStartOf="parent"
         android:text="Price"
-        android:textSize="20sp"
-        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintEnd_toStartOf="@id/productStock"
         app:layout_constraintBottom_toBottomOf="parent"
 
@@ -35,13 +33,15 @@
     <TextView
         android:id="@+id/productStock"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="stock "
-        app:layout_constraintBottom_toBottomOf="@id/productName"
-        app:layout_constraintEnd_toEndOf="@id/productName"
+        android:layout_height="match_parent"
+        android:text="stock"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="10dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@id/productName"
-        app:layout_constraintTop_toTopOf="@id/productName"
-       />
+        app:layout_constraintTop_toTopOf="parent"
+     />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
