@@ -211,14 +211,9 @@ void clearScreen(){
 
                     }
                if (Integer.parseInt(quantityProduct.getText().toString()) > listOfProducts.get(itemIndex).getStockQuantity()) {
-                    Toast.makeText(this, "No enough quantity in the stock", Toast.LENGTH_SHORT).show();;
+                    Toast.makeText(this, "Not enough quantity in the stock", Toast.LENGTH_SHORT).show();;
                     //resets quantity, productType and total textViews to blank
-                    quantityProduct.setText("");
-                    quantityProduct.setHint("Quantity");
-                    totalProduct.setText("");
-                    totalProduct.setHint("Total");
-                  productType.setText("");
-                   productType.setHint("Product Type");
+                    clearScreen();
                 }
 
 
