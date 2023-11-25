@@ -173,20 +173,18 @@ void clearScreen(){
 
                    builder.setMessage("You have purchased " + selectedQty + " " + currentItem.getProductName() + " for " + totalSellingPrice);
                 builder.setTitle("Thank You For Your Purchase");
-                   builder.show();
+
+
                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                       //setonClikcListener to Ok Button
+
                        public void onClick(DialogInterface dialog, int id) {
-                           // open a report activity
-                           //reset the textfields/textViews
-                           quantityProduct.setText("");
-                           quantityProduct.setHint("Quantity");
-                           totalProduct.setText("");
-                           totalProduct.setHint("Total");
-                           productType.setText("");
-                           productType.setHint("Product Type");
+
+                          clearScreen();
                        }
+
                    });
+
+                    builder.show();
 
                }
 

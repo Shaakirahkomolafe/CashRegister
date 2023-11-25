@@ -81,6 +81,8 @@ public class RestockActivity extends AppCompatActivity {
             pro.setStockQuantity(pro.getStockQuantity() + Integer.parseInt(newQuantity.getText().toString()));
             ((myApp) getApplication()).allProducts.set(restockIndex, pro);
             adapter.notifyDataSetChanged();
+            restockIndex=-1;
+           newQuantity.setText("");
 
         } else {
             Toast.makeText(RestockActivity.this, "All fields are required to be filled", Toast.LENGTH_SHORT).show();
